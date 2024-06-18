@@ -1,4 +1,4 @@
-package com.vcmarini.trackfaves.manga;
+package com.vcmarini.trackfaves.model.manga;
 
 public record MangaRequestDTO(
         String title,

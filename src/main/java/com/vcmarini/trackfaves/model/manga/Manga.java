@@ -1,5 +1,6 @@
-package com.vcmarini.trackfaves.manga;
+package com.vcmarini.trackfaves.model.manga;
 
+import com.vcmarini.trackfaves.model.GenreJikan;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -22,7 +23,7 @@ public class Manga {
     private String image;
     private Integer year;
     private Integer chapters;
-    private String genre;
+    private GenreJikan genre;
     private String status;
     private double score;
 
@@ -34,8 +35,23 @@ public class Manga {
         this.image = data.image();
         this.year = data.year();
         this.chapters = data.chapters();
-        this.genre = data.genre();
+        this.genre = GenreJikan.fromJikanGenre(data.genre());
         this.status = data.status();
         this.score = data.score();
+    }
+
+    @Override
+    public String toString() {
+        return "Manga{" +
+                "title='" + title + '\'' +
+                ", author='" + author + '\'' +
+                ", description='" + description + '\'' +
+                ", image='" + image + '\'' +
+                ", year=" + year +
+                ", chapters=" + chapters +
+                ", genre='" + genre + '\'' +
+                ", status='" + status + '\'' +
+                ", score=" + score +
+                '}';
     }
 }

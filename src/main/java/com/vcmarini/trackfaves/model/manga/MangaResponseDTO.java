@@ -1,4 +1,6 @@
-package com.vcmarini.trackfaves.manga;
+package com.vcmarini.trackfaves.model.manga;
+
+import com.vcmarini.trackfaves.model.GenreJikan;
 
 import java.util.UUID;
 
@@ -10,7 +12,7 @@ public record MangaResponseDTO(
         String image,
         Integer year,
         Integer chapters,
-        String genre,
+        GenreJikan genre,
         String status,
         double score
 ) {

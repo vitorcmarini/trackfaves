@@ -1,9 +1,9 @@
 package com.vcmarini.trackfaves.controller;
 
-import com.vcmarini.trackfaves.manga.Manga;
-import com.vcmarini.trackfaves.manga.MangaRepository;
-import com.vcmarini.trackfaves.manga.MangaRequestDTO;
-import com.vcmarini.trackfaves.manga.MangaResponseDTO;
+import com.vcmarini.trackfaves.model.manga.Manga;
+import com.vcmarini.trackfaves.model.manga.MangaRepository;
+import com.vcmarini.trackfaves.model.manga.MangaRequestDTO;
+import com.vcmarini.trackfaves.model.manga.MangaResponseDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

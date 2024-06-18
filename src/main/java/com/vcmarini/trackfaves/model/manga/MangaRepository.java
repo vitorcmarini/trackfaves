@@ -1,4 +1,4 @@
-package com.vcmarini.trackfaves.manga;
+package com.vcmarini.trackfaves.model.manga;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
