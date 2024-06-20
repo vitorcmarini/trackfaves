@@ -26,6 +26,7 @@ public class Manga {
     private GenreJikan genre;
     private String status;
     private double score;
+    private String link;
 
 
     public Manga(MangaRequestDTO data) {
@@ -38,6 +39,38 @@ public class Manga {
         this.genre = GenreJikan.fromJikanGenre(data.genre());
         this.status = data.status();
         this.score = data.score();
+        this.link = data.link();
+    }
+
+    public void mangaDataUpdate(MangaRequestDTO data) {
+        if (data.title() != null){
+            this.title = data.title();
+        }
+        if (data.author() != null){
+            this.author = data.author();
+        }
+        if (data.description() != null){
+            this.description = data.description();
+        }
+        if (data.image() != null){
+            this.image = data.image();
+        }
+        if (data.year() != null){
+            this.year = data.year();
+        }
+        if (data.chapters() != null){
+            this.chapters = data.chapters();
+        }
+        if (data.genre() != null){
+            this.genre = GenreJikan.fromJikanGenre(data.genre());
+        }
+        if (data.status() != null){
+            this.status = data.status();
+        }
+        this.score = data.score();
+        if (data.link() != null){
+            this.link = data.link();
+        }
     }
 
     @Override
@@ -49,9 +82,10 @@ public class Manga {
                 ", image='" + image + '\'' +
                 ", year=" + year +
                 ", chapters=" + chapters +
-                ", genre='" + genre + '\'' +
+                ", genre=" + genre +
                 ", status='" + status + '\'' +
                 ", score=" + score +
+                ", link='" + link + '\'' +
                 '}';
     }
 }

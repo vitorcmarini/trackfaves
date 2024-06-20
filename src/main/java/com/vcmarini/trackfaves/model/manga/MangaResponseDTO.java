@@ -14,9 +14,10 @@ public record MangaResponseDTO(
         Integer chapters,
         GenreJikan genre,
         String status,
-        double score
+        double score,
+        String link
 ) {
     public MangaResponseDTO(Manga manga){
-        this(manga.getId(), manga.getTitle(), manga.getAuthor(), manga.getDescription(), manga.getImage(), manga.getYear(), manga.getChapters(), manga.getGenre(), manga.getStatus(), manga.getScore());
+        this(manga.getId(), manga.getTitle(), manga.getAuthor(), manga.getDescription(), manga.getImage(), manga.getYear(), manga.getChapters(), manga.getGenre(), manga.getStatus(), manga.getScore(), manga.getLink());
     }
 }

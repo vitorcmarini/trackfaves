@@ -24,3 +24,8 @@ logging:
       hibernate:
         SQL: INFO
 #        type.descriptor.sql.BasicBinder: TRACE
+
+manga:
+  csv:
+    file:
+      path: src/main/resources/workload/obras.csv

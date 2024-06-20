@@ -89,21 +89,27 @@ public enum GenreJikan {
     }
 
     public static GenreJikan fromJikanGenre(String jikanGenre) {
+        if (jikanGenre == null || jikanGenre.equalsIgnoreCase("null") || jikanGenre.isEmpty()) {
+            return null;
+        }
         for (GenreJikan gj : GenreJikan.values()) {
-            if (gj.jikanGenre.equalsIgnoreCase(jikanGenre) ){
+            if (gj.jikanGenre.equalsIgnoreCase(jikanGenre)) {
                 return gj;
             }
         }
-        throw new IllegalArgumentException("No equivalent gender found" + jikanGenre);
+        throw new IllegalArgumentException("No equivalent genre found for " + jikanGenre);
     }
 
-    public static GenreJikan fromtrackfavesGenre(String trackfavesGenre) {
+    public static GenreJikan fromTrackfavesGenre(String trackfavesGenre) {
+        if (trackfavesGenre == null || trackfavesGenre.equalsIgnoreCase("null") || trackfavesGenre.isEmpty()) {
+            return null;
+        }
         for (GenreJikan gj : GenreJikan.values()) {
-            if (gj.trackfavesGenre.equalsIgnoreCase(trackfavesGenre) ){
+            if (gj.trackfavesGenre.equalsIgnoreCase(trackfavesGenre)) {
                 return gj;
             }
         }
-        throw new IllegalArgumentException("No equivalent gender found" + trackfavesGenre);
+        throw new IllegalArgumentException("No equivalent genre found for " + trackfavesGenre);
     }
 
 

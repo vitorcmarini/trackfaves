@@ -9,6 +9,7 @@ public record MangaRequestDTO(
         Integer chapters,
         String genre,
         String status,
-        double score
+        double score,
+        String link
 ) {
 }
