@@ -7,3 +7,5 @@ Passos de desenvolvimento:
 * add tablela de mangas e enum de genero
 20/06
 * add leitura de arquivo csv
+25/06
+* add serviçco de leitura de API
